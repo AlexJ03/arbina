@@ -54,14 +54,18 @@ const App = () => {
                     <Tabs id="TabsExample" onChange={handleChange}>
                         <Tab id="firstName" title="Имени" />
                         <Tab id="lastName" title="Фамилии" />
-                        <Tab id="username" title="Никнейме" />
+                        <Tab id="username" title="Никнейму" />
                         <Tabs.Expander />
                     </Tabs>
                 </FormGroup>
 
                 <InputGroup
                     onChange={(e) => setInputText(e.target.value)}
-                    placeholder="Сортировка по имени"
+                    placeholder={
+                        (tabsId === "firstName" && "Сортировка по имени") ||
+                        (tabsId === "lastName" && "Сортировка по фамилии") ||
+                        (tabsId === "username" && "Сортировка по никнейму")
+                    }
                     value={inputText}
                 />
 
