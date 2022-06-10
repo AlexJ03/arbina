@@ -1,6 +1,11 @@
 body {
     padding-top: 30px;
+    /* min-height: 100vh;  */
 }
+/* 
+html {
+    min-height: 100vh;
+} */
 
 @import "~normalize.css";
 @import "~@blueprintjs/core/lib/css/blueprint.css";
